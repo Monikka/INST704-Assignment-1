@@ -65,24 +65,26 @@
         <td width="128px" valign="MIDDLE"><img src="./assets/top_weather.gif" width="128px" height="86px"></td>
         <td width="22px" valign="MIDDLE"><img src="./assets/top_logo_next_start.gif" width="22px" height="86px"></td>
         <td width="163px" background="./assets/top_logo_next.gif" align="CENTER" valign="MIDDLE">
-          <select onchange="location.href = this.value;">
-            <option selected="">QUICKMENU ----&gt;
-            </option><option value="../offsite.html">Broadcasting
-            </option><option value="../offsite.html">Education
-            </option><option value="../offsite.html">Electricity
-            </option><option value="../offsite.html">Fire service
-            </option><option value="../offsite.html">Gas service
-            </option><option value="../offsite.html">Health care
-            </option><option value="../offsite.html">Police service
-            </option><option value="../offsite.html">Public Libraries
-            </option><option value="../offsite.html">Social services
-            </option><option value="../offsite.html">Social housing
-            </option><option value="../offsite.html">Telecommunications
-            </option><option value="../offsite.html">Town planning
-            </option><option value="../offsite.html">Transportation
-            </option><option value="../offsite.html">Waste management
-            </option><option value="../offsite.html">Water services
-          </option></select>
+          <label for="quickmenu">Go to</label>
+          <select id="quickmenu">
+            <option selected="selected">Select an option</option>
+            <option value="../offsite.html">Broadcasting</option>
+            <option value="../offsite.html">Education</option>
+            <option value="../offsite.html">Electricity</option>
+            <option value="../offsite.html">Fire service</option>
+            <option value="../offsite.html">Gas service</option>
+            <option value="../offsite.html">Health care</option>
+            <option value="../offsite.html">Police service</option>
+            <option value="../offsite.html">Public Libraries</option>
+            <option value="../offsite.html">Social services</option>
+            <option value="../offsite.html">Social housing</option>
+            <option value="../offsite.html">Telecommunications</option>
+            <option value="../offsite.html">Town planning</option>
+            <option value="../offsite.html">Transportation</option>
+            <option value="../offsite.html">Waste management</option>
+            <option value="../offsite.html">Water services</option>
+          </select>
+          <button id="gotoBtn" onclick="location.href = this.value;">Submit</button>
         </td>
       </tr>
       <tr height="7px">
@@ -105,7 +107,7 @@
                   today =  days[now.getDay()] + " " + date + " " + months[now.getMonth()] + " " + (fourdigits(now.getYear())) + ", Sunny, 23&deg;C&nbsp;&nbsp;</FONT>";
                   document.all.WEATHER.setAttribute("BGCOLOR", "#EDEDED", 0);
                   document.write(today);
-                </script>Monday 12 January 2015, Sunny, 23¡C&nbsp;&nbsp;</font></td>
+                </script>Monday 12 January 2015, Sunny, 23Â°C&nbsp;&nbsp;</font></td>
             </tr>
           </tbody></table>
         </td>
@@ -153,8 +155,8 @@
         </td>
         <td width="20px"><img src="./assets/blank_5x5.gif" width="20px" height="5px"></td>
         <td width="625px" height="600px" valign="TOP" id="main"><div>
-          <p class="headline">Citylights Survey</p>
-          <p class="headline"><font size="4">This Week's Survey: More city parks - a pain or a gain?</font></p>
+          <h2 class="headline">Citylights Survey</h2>
+          <h4 class="headline"><font size="4">This Week's Survey: More city parks - a pain or a gain?</font></h4>
             <form action="" method="post">
             <table class="bordotabella" width="90%" border="0" cellspacing="2" cellpadding="0">
               <tbody><tr>
@@ -256,14 +258,60 @@
                           <tbody><tr>
                             <td colspan="2"><img src="./assets/gif.gif" alt="" height="10" width="10" border="0"></td>
                           </tr>
+                          
                           <tr>
-                            <th align="left" colspan="2">Which city do you find is the greenest?<img src="./assets/gif.gif" alt="" height="25" width="5" border="0"></th>
-                          </tr>
-                          <tr>
-                            <td valign="middle" colspan="2"><span> 
-                                <select name="cc">
-                                  <option value="0">select a city -----&gt;</option>
-                                  <option>Afghanistan, Kabul</option>
+                            <td valign="middle" colspan="2"><span>
+                                <label for="favcity2"><b>Which city do you find is the greenest?</b></label> 
+                                <select id="favcity2" name="cc">
+                                    <optgroup label="Asia">
+                                        <option>Afghanistan, Kabul</option>
+                                        <option>Bahrain, Manama</option>
+                                        <option>Bangladesh, Dhaka</option>
+                                        <option>Bhutan, Thimphu</option>
+                                        <option>Brunei, Bandar Seri Begawan</option>
+                                        <option>Burma, Rangoon</option>
+                                        
+                                  <option>Cambodia, Phnom Penh</option>
+                                  <option>China, Beijing</option>
+                                  <option>East Timor, Dili</option>
+                                  <option>India, New Delhi</option>
+                                  <option>Indonesia, Jakarta</option>
+                                  <option>Iran, Tehran</option>
+                                  <option>Iraq, Baghdad</option>
+                                  <option>Japan, Tokyo</option>
+                                  <option>Jordan, Amman</option>
+                                  <option>Kazakhstan, Astana</option>
+                                  <option>Korea, North, P'yongyang</option>
+                                  <option>Korea, South, Seoul</option>
+                                  <option>Kuwait, Kuwait</option>
+                                  <option>Kyrgyzstan, Bishkek</option>
+                                  <option>Laos, Vientiane</option>
+                                  <option>Lebanon, Beirut</option>                                  
+                                  <option>Israel, Jerusalem</option>
+                                  <option>Malaysia, Kuala Lumpur</option>
+                                  <option>Maldives, Male</option>
+                                  <option>Nepal, Kathmandu</option>
+                                  <option>Oman, Muscat</option>
+                                  <option>Pakistan, Islamabad</option>
+                                  <option>Philippines, Manila</option>
+                                  <option>Saudi Arabia, Riyadh</option>
+                                  <option>Singapore, Singapore</option>
+                                  <option>Sri Lanka, Colombo</option>
+                                  <option>Syria, Damascus</option>
+                                  <option>Taiwan, Taipei</option>
+                                  <option>Tajikistan, Dushanbe</option>
+                                  <option>Turkey, Ankara</option>
+                                  <option>Turkmenistan, Ashgabat</option>
+                                  <option>United Arab Emirates, Abu Dhabi</option>
+                                  <option>Uzbekistan, Tashkent</option>
+                                  <option>Vietnam, Hanoi</option>
+                                  <option>Yemen, Sanaa</option>
+                                    </optgroup>
+                                    <optgroup label="Europe"></optgroup>
+                                    <optgroup label="North America"></optgroup>
+                                    <optgroup label="South America"></optgroup>
+                                  
+                                  
                                   <option>Albania, Tirana</option>
                                   <option>Algeria, Algiers</option>
                                   <option>Andorra, Andorra la Vella</option>
@@ -275,31 +323,31 @@
                                   <option>Austria, Vienna</option>
                                   <option>Azerbaijan, Baku (Baki)</option>
                                   <option>Bahamas, The Nassau</option>
-                                  <option>Bahrain, Manama</option>
-                                  <option>Bangladesh, Dhaka</option>
+                                  
+                                  
                                   <option>Barbados, Bridgetown</option>
                                   <option>Belarus, Minsk</option>
                                   <option>Belgium, Brussels</option>
                                   <option>Belize, Belmopan</option>
                                   <option>Benin, Porto-Novo</option>
-                                  <option>Bhutan, Thimphu</option>
+                                  
                                   <option>Bolivia, Sucre</option>
                                   <option>Bosnia and Herzegovina, Sarajevo</option>
                                   <option>Botswana, Gaborone</option>
                                   <option>Brazil, Brasilia</option>
-                                  <option>Brunei, Bandar Seri Begawan</option>
+                                  
                                   <option>Bulgaria, Sofia</option>
                                   <option>Burkina Faso, Ouagadougou</option>
-                                  <option>Burma, Rangoon</option>
+                                  
                                   <option>Burundi, Bujumbura</option>
-                                  <option>Cambodia, Phnom Penh</option>
+                                  
                                   <option>Cameroon, Yaounde</option>
                                   <option>Canada, Ottawa</option>
                                   <option>Cape Verde, Praia</option>
                                   <option>Central African Republic, Bangui</option>
                                   <option>Chad, N'Djamena</option>
                                   <option>Chile, Santiago</option>
-                                  <option>China, Beijing</option>
+                                  
                                   <option>Colombia, Bogota</option>
                                   <option>Comoros, Moroni</option>
                                   <option>Congo, Democratic Republic of the, Kinshasa</option>
@@ -315,7 +363,8 @@
                                   <option>Djibouti, Djibouti</option>
                                   <option>Dominica, Roseau</option>
                                   <option>Dominican Republic, Santo Domingo</option>
-                                  <option>East Timor, Dili</option>
+
+                                  
                                   <option>Ecuador, Quito</option>
                                   <option>Egypt, Cairo</option>
                                   <option>El Salvador, San Salvador</option>
@@ -344,26 +393,17 @@
                                   <option>Hong Kong, Hong Kong</option>
                                   <option>Hungary, Budapest</option>
                                   <option>Iceland, Reykjavik</option>
-                                  <option>India, New Delhi</option>
-                                  <option>Indonesia, Jakarta</option>
-                                  <option>Iran, Tehran</option>
-                                  <option>Iraq, Baghdad</option>
+
                                   <option>Ireland, Dublin</option>
-                                  <option>Israel, Jerusalem</option>
                                   <option>Italy, Rome</option>
                                   <option>Jamaica, Kingston</option>
-                                  <option>Japan, Tokyo</option>
-                                  <option>Jordan, Amman</option>
-                                  <option>Kazakhstan, Astana</option>
+                                  
                                   <option>Kenya, Nairobi</option>
                                   <option>Kiribati, Tarawa</option>
-                                  <option>Korea, North, P'yongyang</option>
-                                  <option>Korea, South, Seoul</option>
-                                  <option>Kuwait, Kuwait</option>
-                                  <option>Kyrgyzstan, Bishkek</option>
-                                  <option>Laos, Vientiane</option>
+
+                                  
                                   <option>Latvia, Riga</option>
-                                  <option>Lebanon, Beirut</option>
+                                  
                                   <option>Lesotho, Maseru</option>
                                   <option>Liberia, Monrovia</option>
                                   <option>Libya, Tripoli</option>
@@ -374,8 +414,7 @@
                                   <option>Macedonia, The Former Yugoslav Republic of, Skopje</option>
                                   <option>Madagascar, Antananarivo</option>
                                   <option>Malawi, Lilongwe</option>
-                                  <option>Malaysia, Kuala Lumpur</option>
-                                  <option>Maldives, Male</option>
+                                  
                                   <option>Mali, Bamako</option>
                                   <option>Malta, Valletta</option>
                                   <option>Marshall Islands, Majuro</option>
@@ -390,7 +429,8 @@
                                   <option>Mozambique, Maputo</option>
                                   <option>Namibia, Windhoek</option>
                                   <option>Nauru, Yaren District</option>
-                                  <option>Nepal, Kathmandu</option>
+
+                                  
                                   <option>Netherlands, Amsterdam</option>
                                   <option>New Zealand, Wellington</option>
                                   <option>Nicaragua, Managua</option>
@@ -398,13 +438,14 @@
                                   <option>Nigeria, Abuja</option>
                                   <option>Niue, Alofi</option>
                                   <option>Norway, Oslo</option>
-                                  <option>Oman, Muscat</option>
-                                  <option>Pakistan, Islamabad</option>
+
+                                  
                                   <option>Palau, Koror</option>
                                   <option>Papua New Guinea, Port Moresby</option>
                                   <option>Paraguay, Asuncion</option>
                                   <option>Peru, Lima</option>
-                                  <option>Philippines, Manila</option>
+
+                                  
                                   <option>Poland, Warsaw</option>
                                   <option>Romania, Bucharest</option>
                                   <option>Russia, Moscow</option>
@@ -415,47 +456,48 @@
                                   <option>Samoa, Apia</option>
                                   <option>San Marino, San Marino</option>
                                   <option>Sao Tome and Principe, Sao Tome</option>
-                                  <option>Saudi Arabia, Riyadh</option>
+                                  
                                   <option>Senegal, Dakar</option>
                                   <option>Serbia and Montenegro, Belgrade</option>
                                   <option>Seychelles, Victoria</option>
                                   <option>Sierra Leone, Freetown</option>
-                                  <option>Singapore, Singapore</option>
+
+                                  
                                   <option>Slovakia, Bratislava</option>
                                   <option>Slovenia, Ljubljana</option>
                                   <option>Solomon Islands, Honiara</option>
                                   <option>Somalia, Mogadishu</option>
                                   <option>South Africa, Pretoria, Cape Town</option>
                                   <option>Spain, Madrid</option>
-                                  <option>Sri Lanka, Colombo</option>
+
+                                  
                                   <option>Sudan, Khartoum</option>
                                   <option>Suriname, Paramaribo</option>
                                   <option>Swaziland, Mbabane, Lobamba</option>
                                   <option>Sweden, Stockholm</option>
                                   <option>Switzerland, Bern</option>
-                                  <option>Syria, Damascus</option>
-                                  <option>Taiwan, Taipei</option>
-                                  <option>Tajikistan, Dushanbe</option>
+
+                                  
                                   <option>Tanzania, Dar es Salaam</option>
                                   <option>Thailand, Bangkok</option>
                                   <option>Togo, Lome</option>
                                   <option>Tonga, Nuku'alofa</option>
                                   <option>Trinidad and Tobago, Port-of-Spain</option>
                                   <option>Tunisia, Tunis</option>
-                                  <option>Turkey, Ankara</option>
-                                  <option>Turkmenistan, Ashgabat</option>
+
+                                  
                                   <option>Tuvalu, Fongafale</option>
                                   <option>Uganda, Kampala</option>
                                   <option>Ukraine, Kiev</option>
-                                  <option>United Arab Emirates, Abu Dhabi</option>
+                                  
                                   <option>United Kingdom, London</option>
                                   <option>United States of America, Washington, D.C.</option>
                                   <option>Uruguay, Montevideo</option>
-                                  <option>Uzbekistan, Tashkent</option>
+
+                                  
                                   <option>Vanuatu, Port-Vila</option>
                                   <option>Venezuela, Caracas</option>
-                                  <option>Vietnam, Hanoi</option>
-                                  <option>Yemen, Sanaa</option>
+                                  
                                   <option>Zambia, Lusaka</option>
                                   <option>Zimbabwe, Harare</option>
                                 </select></span><img src="./assets/gif.gif" alt="" height="25" width="5" border="0">
@@ -482,15 +524,31 @@
                             <td colspan="2"><img src="./assets/gif.gif" alt="" height="10" width="10" border="0"></td>
                           </tr>
                           <tr>
-                            <th align="left" colspan="2"><span>Do you want to receive a free newsletter?<img src="./assets/gif.gif" alt="" height="25" width="5" border="0"></span></th>
+                            
+                              <legend><b>Do you want to receive a free newsletter?</b></legend>
+                              <label>Prefix:</label>
+                              <input id="prefixMr" type="radio" name="prefixMr" value="mr">
+                              <label for="prefixMr"> Mr. </label>
+                              <input id="prefixMrs" type="radio" name="prefixMrs" value="mrs">
+                              <label for="prefixMrs">Mrs.</label>
+                            </nobr><br><br>
+                            <input type="text" name="em" id="em" size="20">
+                            <input type="text" name="ev" id="ev" size="20">
+                            <input type="text" name="n" id="n" size="30">
+                            
+                            <th align="left" colspan="2">
+                                
+                              <label><img src="./assets/gif.gif" alt="" height="25" width="5" border="0"></label></th>
                           </tr>
                           <tr>
                             <td>
                               <table border="0" cellspacing="2" cellpadding="0">
                                 <tbody><tr>
-                                  <td valign="bottom"><img src="./assets/gif.gif" alt="" height="25" width="5" border="0"><nobr>Name: <input type="radio" name="t" value="mr"> Mr. <input type="radio" name="t" value="mrs"> Mrs.</nobr><br><br><input type="text" name="em" id="em" size="20"></td>
+                                  <td valign="bottom"><img src="./assets/gif.gif" alt="" height="25" width="5" border="0"><nobr>
+                                    
+                                    
                                   <td><img src="./assets/gif.gif" alt="" height="25" width="5" border="0"></td>
-                                  <td valign="bottom"><input type="text" name="n" id="n" size="30"><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="ev" id="ev" size="20"></td>
+                                  <td valign="bottom"><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                                 </tr>
                                 <tr>
                                   <td valign="top">eMail Address</td>
@@ -555,7 +613,7 @@
     </tbody></table>
     <table width="780px" height="17px" border="0px" cellspacing="0px" cellpadding="0px" bgcolor="#EDEDED">
       <tbody><tr height="17px">
-        <td align="RIGHT"><font color="BLACK" face="Verdana" size="1"><a rel="Copyright" href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2012 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>¨</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>)</font></td>
+        <td align="RIGHT"><font color="BLACK" face="Verdana" size="1"><a rel="Copyright" href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> ï¿½ 2012 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>ï¿½</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>)</font></td>
       </tr>
     </tbody></table>
         </td><td width="10px" background="./assets/border_right.gif"><img src="./assets/border_right.gif" width="10px"></td>
